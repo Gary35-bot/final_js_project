@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+<body>
+  <div class="form-container">
+    <form onsubmit="registeradmin(); event.preventDefault()" id="form">
+      <div class="details">
+        <div>
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" />
+        </div>
+        <div>
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name" />
+        </div>
+        <div>
+          <label for="id_num">identity</label>
+          <input type="number" name="identity" id="identity" />
+        </div>
+        <div>
+          <label for="phone">phone</label>
+          <input type="text" id="phone" name="email" />
+        </div>
+        <div>
+          <label for="email">email</label>
+          <input type="text" id="email" name="id_num" />
+        </div>
+        <div>
+          <label for="id_num">username</label>
+          <input type="text" id="username" name="id_num" />
+        </div>
+        <div>
+          <label for="id_num">pass</label>
+          <input type="text" id="password" name="id_num" />
+        </div>
+      </div>
+      <button type="submit">Submit Info</button>
+    </form>
+  </div>
+        <script src="./scripts/admin_register.js"></script>
+</body>
+</html>

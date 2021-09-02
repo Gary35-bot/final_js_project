@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="filters">
+        <form onsubmit="event.preventDefault(); searchPhones();">
+            <input types="text" required id="searchTerm">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+    <div id="products-container"></div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+    >
+    <input type="file" id="Image" name="image" onchange="imageConverter()" required>
+    <input type="text" name="product_name" id="product_name" />
+    <input type="text" name="description" id="description" />
+    <input type="text" name="feature" id="features" />
+    <input type="text" name="price" id="price">
+    <button onclick="event.preventDefault() ,addPhone()" class="addbtn">Add a Phone</button>
+    </form>
+
+    <!-- <form
+    >
+    <input type="text" id="sneakerName" name="sneaker_name" placeholder="Enter the new name..." required>
+    <input type="text" name="product_name" id="product_name" />
+    <input type="text" name="description" id="description" />
+    <input type="text" name="feature" id="features" />
+    <input type="text" name="price" id="price">
+    <button onclick="event.preventDefault() ,proceed()" class="addbtn">proceed</button>
+</form> -->    
+    <img src="" alt="" class="format-img"/>
+</body>
+
+<script src="./scripts/admin_screen.js"></script>
+</html>
