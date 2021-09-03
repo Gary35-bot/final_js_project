@@ -1,6 +1,8 @@
 let products = [] // created a empty array so products can be displayed //
 let cart = []  // array cart is used for the items //
 
+const mystorage = window.localStorage
+
 // connects with the api
 fetch("https://blooming-ocean-52967.herokuapp.com/view-products/")
   .then((response) => response.json())
@@ -71,16 +73,28 @@ function addToCart(id) {
   });
   console.log(product);
   cart.push(product);
+  console.log(cart)
+  alert('Added to Cart')
   // console.log("Here is your items:", cart);
   // renderCart(cart);
 }
-
+let thing = 0
 // created a modal
 // so when you click the button "add to cart" items gets displayed in the modal
 function Modal() {
-	document.querySelector(`.hi`)
-        .classList.toggle("active");
-  showCart()
+  if (thing == 0){
+    document.body.style.overflowY = 'hidden'
+    document.querySelector(`.hi`).classList.toggle("active");
+    showCart();
+    calcuTotal();
+    thing = 1
+  }else {
+    document.body.style.overflowY = 'scroll'
+    document.querySelector(`.hi`).classList.toggle("active");
+    showCart();
+    calcuTotal();
+    thing = 0
+  } 
 }
 
 // this function aligns with the modal so you can see the items in  the cart
@@ -95,8 +109,31 @@ function showCart(){
       <h3 class="product-discription">${item.product_name}</h3>
       <h3 class="product-discription">${item.description}</h3>
       <h3 class="product-price">${item.price}</h3>
+      <button onclick="remove(${item.product_id})" class="remove-btn text-bold">Remove</button>
+      <button onclick="calcuTotal(${item.product_id})" class="remove-btn text-bold">/</button>
   </div>
   `
-  })
+  });
 }
+
+function calcuTotal(){
+  let totalcost = 0
+  for (let i of cart){
+    price = parseInt(i['price'].substring(1))
+      totalcost += price
+  }
+  console.log(totalcost)
+  document.querySelector('.totalofcart').innerHTML = `Total Cost: <span> R${totalcost} </span>`;
+}
+// remove from cart
+
+function remove(id) {
+  cart = cart.filter(item => item.product_id != id)
+  showCart(cart);
+  calcuTotal()
+  alert('Removed from Cart')
+}
+
+
+
 
