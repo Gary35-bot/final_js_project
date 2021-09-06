@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <title>Document</title>
-</head>
-<body>
-
-  <!-- Trigger/Open The Modal -->
-  <!-- <div id="cart">You have no items in cart</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3ce17028e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./stylesheets/home_page.style.css" />
+    <title>Home_Page</title>
+  </head>
+  <body>
+    <!-- Trigger/Open The Modal -->
+    <!-- <div id="cart">You have no items in cart</div>
   <button onclick="toggleCart()" id="cart-button">My shopping Cart</button>
  -->
 
-
- <button class="modal-button" onclick="Modal()">My shopping Cart</button>
- <div class="hi">
-   <div class="cart"></div>
-   <div class="cart-container">
-  </div>
-    <div class="cart-buttons">  
-      <button  id="deleteitem">Delete Item</button>
-      <button id="checkout">Checkout</button>
-    </div>
-    <div class="totalofcart"></div>
- </div>
-
-
-  <!-- <div class="dropdown">
-    <button class="dropbtn">My shopping Cart</button>
-    <div class="dropdown-content">
-      <a href="./my_shopping_cart.html">Cart</a>
-    </div>
-  </div> -->
-
-        <div class="dropdown">
-            <button class="dropbtn">My Account</button>
-            <div class="dropdown-content">
-              <a href="./register.html">Register?</a>
-              <a href="./login.html">Login</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <button class="dropbtn">Admin</button>
-            <div class="dropdown-content">
-              <a href="./register.html">Register</a>
-              <a href="./login.html">Login</a>
-            </div>
-          </div>
-    </nav>
-    <div id="filters">
-        <form onsubmit="event.preventDefault(); searchPhones();">
-            <input types="text" required id="searchTerm">
-            <button type="submit">Search</button>
-        </form>
-        <div id="button-filter">
-        <button class="btn"  onclick="productFilter('All')" class="name">Show all</button>
-        <button class="btn" onclick="productFilter('Samsung')" class="name">Samsung</button>
-        <button class="btn" onclick="productFilter('Sony')" class="name">Sony</button>
-        <button class="btn" onclick="productFilter('Nokia')" class="name">Nokia</button>
-        <button class="btn" onclick="productFilter('LG')" class="name">LG</button>
-        <button class="btn" onclick="productFilter('Iphone')" class="name">Iphone</button>
+    <nav id="navbar">
+      <button class="modal-button" onclick="Modal()">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+      <div class="hi">
+        <div class="cart"></div>
+        <div class="cart-container"></div>
+        <div class="cart-buttons">
+          <button id="deleteitem">Delete Item</button>
+          <button id="checkout">Checkout</button>
         </div>
+        <div class="totalofcart"></div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">My Account</button>
+        <div class="dropdown-content">
+          <a href="./register.html">Register?</a>
+          <a href="./login.html">Login</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Admin</button>
+        <div class="dropdown-content">
+          <a href="./admin_register.html">Register</a>
+          <a href="./login_admin.html">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="filters">
+      <form onsubmit="event.preventDefault(); searchPhones();">
+        <input types="text" required id="searchTerm" />
+        <button type="submit">Search</button>
+      </form>
+      <div id="button-filter">
+        <button class="btn" onclick="productFilter('All')" class="name">
+          Show all
+        </button>
+        <button class="btn" onclick="productFilter('Samsung')" class="name">
+          Samsung
+        </button>
+        <button class="btn" onclick="productFilter('Sony')" class="name">
+          Sony
+        </button>
+        <button class="btn" onclick="productFilter('Nokia')" class="name">
+          Nokia
+        </button>
+        <button class="btn" onclick="productFilter('LG')" class="name">
+          LG
+        </button>
+        <button class="btn" onclick="productFilter('Iphone')" class="name">
+          Iphone
+        </button>
+      </div>
     </div>
-    
+
     <div id="products-container"></div>
 
-    
-
-</body>
-<script src="./scripts/products.js"></script>
+    <img src="" alt="" />
+  </body>
+  <script src="./scripts/products.js"></script>
 </html>

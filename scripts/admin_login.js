@@ -1,4 +1,4 @@
-const baseURL = "https://guarded-retreat-61794.herokuapp.com/login-admin/";
+const baseURL = "https://blooming-ocean-52967.herokuapp.com/login-admin/";
 
 // this code below allows users to Admin login
 function loginAdmin() {
@@ -16,13 +16,13 @@ function loginAdmin() {
 		},
 	})
 		.then((res) => res.json())
-		.then((data) => {
-			console.log(data);
-            localStorage.setItem("user", JSON.stringify(data.data));
-			if (data.status_code == 200) {
-				window.location.href = "./index.html";
+		.then((json) => {
+			console.log(json.data);
+			if (json.data == 0) {
+				alert("wrong")
 			} else {
-				alert("Sorry wrong username and password try again.");
+				localStorage.setItem("users", JSON.stringify(json.data));
+				window.location = './admin_screen.html'
 			}
 		});
 }

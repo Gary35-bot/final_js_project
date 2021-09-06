@@ -17,13 +17,13 @@ function loginUser() {
 		},
 	})
 		.then((res) => res.json())
-		.then((data) => {
-			console.log(data);
-            localStorage.setItem("user", JSON.stringify(data.data));
-			if (data.status_code == 200) {
-				window.location.href = "./index.html";
+		.then((json) => {
+			console.log(json.data);
+			if (json.data == 0) {
+				alert("wrong");
 			} else {
-				alert("Sorry wrong username and password try again.");
+				localStorage.setItem("users", JSON.stringify(json.data));
+				window.location = './index.html'
 			}
 		});
 }

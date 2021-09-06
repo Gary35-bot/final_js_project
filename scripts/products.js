@@ -78,11 +78,11 @@ function addToCart(id) {
   // console.log("Here is your items:", cart);
   // renderCart(cart);
 }
-let thing = 0
+let background = 0
 // created a modal
 // so when you click the button "add to cart" items gets displayed in the modal
 function Modal() {
-  if (thing == 0){
+  if (background == 0){
     document.body.style.overflowY = 'hidden'
     document.querySelector(`.hi`).classList.toggle("active");
     showCart();
