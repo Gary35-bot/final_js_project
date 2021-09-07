@@ -20,11 +20,14 @@ function renderproducts(products) {
   products.forEach((product) => {
     productContainer.innerHTML += `
       <div class="products">
-        <img class="image" src=${product.image} alt="pic">
+        <img class="phone-img" src=${product.image} alt="pic">
+        <div class="content"
         <h3 class="product-discription">${product.product_name}</h3>
         <h3 class="product-discription">${product.description}</h3>
-        <h3 class="product-discription">${product.features}</h3>
+        <h3 class="product-feature"><span id="dots-${product.product_id}"></span>${product.features}<span id="more-${product.product_id}"></span></h3>
+        <button onclick="readMe(${product.product_id})" id="myBtn-${product.product_id}">Read more</button>
         <h3 class="product-price">${product.price}</h3>
+        </div>
         <button onclick="addToCart(${product.product_id})">Cart</button>
       </div>       
     `;
@@ -64,19 +67,26 @@ function productFilter(category) {
 
 // add tocard function
 function addToCart(id) {
-  let product = products.find((item) => {
-    return item.product_id == id;
-  });
-  console.log(product);
-  cart = JSON.parse(mystorage.getItem("cart"));
-  cart.push(product);
-  console.log(cart);
-  mystorage.setItem("cart", JSON.stringify(cart));
-  console.log(mystorage.getItem("cart"));
+  // mystorage.removeItem("users");
+  if (mystorage.getItem("users")) {
+    let product = products.find((item) => {
+      return item.product_id == id;
+    });
+    console.log(product);
+    if (mystorage["cart"]) {
+      cart = JSON.parse(mystorage.getItem("cart"));
+    }
+    cart.push(product);
+    console.log(cart);
+    mystorage.setItem("cart", JSON.stringify(cart));
+    console.log(mystorage.getItem("cart"));
 
-  alert("Added to Cart");
-  // console.log("Here is your items:", cart);
-  // renderCart(cart);
+    alert("Added to Cart");
+    // console.log("Here is your items:", cart);
+    // renderCart(cart);
+  } else {
+    alert("Login u STUK NAAI!");
+  }
 }
 let background = 0;
 // created a modal
@@ -104,9 +114,7 @@ function showCart() {
   cart = JSON.parse(mystorage.getItem("cart"));
   cart.forEach((item) => {
     container.innerHTML += `
-  <span onclick="Modal()" class="close">&times</span>
-  <div class="products">
-      <img class="image" src=${item.image} alt="pic">
+    <i class="fas fa-times close" onclick="Modal()"></i>dots
       <h3 class="product-discription">${item.product_name}</h3>
       <h3 class="product-discription">${item.description}</h3>
       <h3 class="product-price">${item.price}</h3>
@@ -137,4 +145,26 @@ function remove(id) {
   showCart(cart);
   calcuTotal();
   alert("Removed from Cart");
+}
+
+function logout() {
+  alert("successful");
+  window.localStorage.clear();
+  alert("done");
+  window.location = "./login.html";
+}
+
+// readmore button
+function readMe(id) {
+  let dots = document.getElementById(`dots-${id}`);
+  let moreText = document.getElementById(`more-${id}`);
+  let btnText = document.getElementById(`myBtn-${id}`);
+  if (!dots) return true;
+  if (dots.style.display == "block") {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "block";
+  }
 }
