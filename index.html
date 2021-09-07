@@ -18,6 +18,7 @@
  -->
 
     <nav id="navbar">
+      <h1 class="heading">Mobi-Tech</h1>
       <button class="modal-button" onclick="Modal()">
         <i class="fas fa-shopping-cart"></i>
       </button>
@@ -49,26 +50,56 @@
 
     <div id="filters">
       <form onsubmit="event.preventDefault(); searchPhones();">
-        <input types="text" required id="searchTerm" />
-        <button type="submit">Search</button>
+        <input class="input" types="text" required id="searchTerm" />
+        <button class="search-bar" type="submit">Search</button>
       </form>
       <div id="button-filter">
-        <button class="btn" onclick="productFilter('All')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.07s"
+          onclick="productFilter('All')"
+          class="name"
+        >
           Show all
         </button>
-        <button class="btn" onclick="productFilter('Samsung')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.14s"
+          onclick="productFilter('Samsung')"
+          class="name"
+        >
           Samsung
         </button>
-        <button class="btn" onclick="productFilter('Sony')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.21s"
+          onclick="productFilter('Sony')"
+          class="name"
+        >
           Sony
         </button>
-        <button class="btn" onclick="productFilter('Nokia')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.28s"
+          onclick="productFilter('Nokia')"
+          class="name"
+        >
           Nokia
         </button>
-        <button class="btn" onclick="productFilter('LG')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.35s"
+          onclick="productFilter('LG')"
+          class="name"
+        >
           LG
         </button>
-        <button class="btn" onclick="productFilter('Iphone')" class="name">
+        <button
+          class="btn bouncy"
+          style="animation-delay: 0.42s"
+          onclick="productFilter('Iphone')"
+          class="name"
+        >
           Iphone
         </button>
       </div>

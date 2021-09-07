@@ -15,8 +15,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  font-family: sans-serif;
 }
-
+.heading {
+  display: flex;
+}
 #navbar {
   position: fixed;
   top: 0;
@@ -29,22 +32,28 @@ body {
   align-items: center;
   list-style-type: none;
   text-transform: uppercase;
-}
-#buttons {
-  display: flex;
+  height: 55px;
+  gap: 15px;
+  z-index: 100;
 }
 
 .dropbtn {
   background-color: #0000ff;
   color: white;
-  padding: 16px;
+  padding: 19px;
   font-size: 16px;
+  display: flex;
   border: none;
 }
 
+.fa-shopping-cart {
+  background: none;
+  font-size: 20px;
+}
 .modal-button {
   color: #0000ff;
   background: none;
+  border: none;
 }
 
 .dropdown {
@@ -121,4 +130,107 @@ body {
 .totalofcart {
   background-color: white;
   font-size: 20px;
+}
+
+/* >>>>>>button filter<<<< */
+
+#filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  margin-top: 5rem;
+  z-index: 100;
+}
+
+.input {
+  border: none;
+  width: 150;
+  height: 25px;
+  border-radius: 50px;
+  align-items: center;
+  outline: none;
+  background-color: black;
+}
+
+.btn {
+  border: none;
+  background-color: blue;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border: 1px;
+  font-weight: 900;
+}
+
+.btn:hover {
+  background-color: #ff8000;
+}
+
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: -0.9em;
+  }
+  43% {
+    top: 0em;
+  }
+  46% {
+    top: -0.4em;
+  }
+  48% {
+    top: 0em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+/* >>>>>>>items<<<<<< */
+#products-container {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.products {
+  border-radius: 20px;
+  margin: 20px;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 255) 0%,
+    rgba(255, 128, 0, 1) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 20%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  background: none;
 }
