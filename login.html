@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/login.css" />
     <title>login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-form">
-        <form onsubmit="loginUser(); event.preventDefault()" id="form">
-            <div>
-                <label for="username">Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="username"
-                    required
-                />
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-            </div>
-            <button type="submit">Log In</button>
-        </form>
-        <a href="./register.html">Register?</a>
+      <form onsubmit="event.preventDefault(), loginUser()" id="form">
+        <div class="intro-text">
+          <h1>Login</h1>
+          <p>Stay Updated On worldclass SmartPhones In The World</p>
+        </div>
+        <div class="input">
+          <input type="text" id="username" name="username" required />
+          <label for="username"> username </label>
+        </div>
+        <div class="input">
+          <input type="password" id="password" name="password" required />
+          <label for="password"> Password </label>
+        </div>
+        <div class="logbtn">
+          <button class="loginbtn" type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="link">
+        <a class="linkin" href="./register.html">Register?</a>
+      </div>
     </div>
     <script src="./scripts/login.js"></script>
-</body>
+  </body>
 </html>

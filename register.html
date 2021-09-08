@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/register.css" />
     <title>Register Form</title>
-</head>
-<body>
-  <div class="form-container">
-    <form onsubmit="registeruser(); event.preventDefault()" id="form">
-      <div class="details">
-        <div>
+  </head>
+  <body>
+    <div class="register-container">
+      <form onsubmit="registeruser(); event.preventDefault()" id="form">
+        <div class="intro-text">
+          <h1>Register</h1>
+          <p>Stay Updated On worldclass SmartPhones In The World</p>
+        </div>
+
+        <div class="input">
+          <input type="text" id="first_name" name="first_name" required />
           <label for="first_name">First Name</label>
-          <input type="text" id="first_name" name="first_name" />
         </div>
-        <div>
+        <div class="input">
+          <input type="text" id="last_name" name="last_name" required />
           <label for="last_name">Last Name</label>
-          <input type="text" id="last_name" name="last_name" />
         </div>
-        <div>
-          <label for="id_num">identity</label>
-          <input type="number" name="identity" id="identity" />
+        <div class="input">
+          <input type="text" name="identity" id="identity" required />
+          <label for="id_number">identity</label>
         </div>
-        <div>
+        <div class="input">
+          <input type="text" id="phone" name="email" required />
           <label for="phone">phone</label>
-          <input type="text" id="phone" name="email" />
         </div>
-        <div>
+        <div class="input">
+          <input type="text" id="email" name="id_num" required />
           <label for="email">email</label>
-          <input type="text" id="email" name="id_num" />
         </div>
-        <div>
-          <label for="id_num">username</label>
-          <input type="text" id="username" name="id_num" />
+        <div class="input">
+          <input type="text" id="username" name="id_num" required />
+          <label for="username">username</label>
         </div>
-        <div>
-          <label for="id_num">pass</label>
-          <input type="text" id="password" name="id_num" />
+        <div class="input">
+          <input type="password" id="password" name="id_num" required />
+          <label for="password">password</label>
         </div>
-      </div>
-      <button type="submit">Submit Info</button>
-    </form>
-  </div>
-        <script src="./scripts/register.js"></script>
-</body>
+        <div class="regbtn">
+          <button class="regis-btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="./scripts/register.js"></script>
+  </body>
 </html>

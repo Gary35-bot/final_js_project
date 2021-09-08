@@ -67,6 +67,7 @@ function productFilter(category) {
 
 // add tocard function
 function addToCart(id) {
+  console.log("test");
   // mystorage.removeItem("users");
   if (mystorage.getItem("users")) {
     let product = products.find((item) => {
@@ -85,7 +86,7 @@ function addToCart(id) {
     // console.log("Here is your items:", cart);
     // renderCart(cart);
   } else {
-    alert("Login u STUK NAAI!");
+    alert("Login in first!");
   }
 }
 let background = 0;

@@ -2,13 +2,15 @@ const baseURL = "https://blooming-ocean-52967.herokuapp.com/login/";
 
 // this code below allows users to login
 function loginUser() {
-  const username = document.querySelector("#username").value;
-  const password = document.querySelector("#password").value;
-  if (window.localStorage["cart"] && window.localStorage["users"]) {
+  let username = document.querySelector("#username").value;
+  let password = document.querySelector("#password").value;
+  if (window.localStorage["cart"] || window.localStorage["users"]) {
+    console.log("ganief");
     if (
       username == JSON.parse(window.localStorage["users"])[0].username &&
       password == JSON.parse(window.localStorage["users"])[0].password
     ) {
+      alert("already logged in");
       window.location = "./index.html";
     } else {
       alert("log out first");
@@ -29,7 +31,7 @@ function loginUser() {
       .then((json) => {
         console.log(json.data);
         if (json.data == 0) {
-          alert("wrong");
+          alert("Wrong username or password");
         } else {
           localStorage.setItem("users", JSON.stringify(json.data));
           window.location = "./index.html";
