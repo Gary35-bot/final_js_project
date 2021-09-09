@@ -389,3 +389,11 @@ body {
   display: flex;
   justify-content: flex-start;
 }
+
+@media screen and (max-width: 800px) {
+  .dropbtn {
+    background-color: #0000ff;
+    padding: 15px;
+    font-size: 10px;
+  }
+}
