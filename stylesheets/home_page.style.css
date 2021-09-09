@@ -286,7 +286,7 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   color: white;
-  padding: 20px 10px;
+  padding: 18px;
   background: #0000ff;
 }
 
@@ -400,7 +400,7 @@ body {
   }
 
   .logoutbtn {
-    padding: 15px 5px;
+    padding: 18px;
     font-size: 10px;
   }
   .dropdown-content {
@@ -411,5 +411,8 @@ body {
   }
   .dropdown-content {
     min-width: 100px;
+  }
+  .dropbtn {
+    padding: 14px;
   }
 }
