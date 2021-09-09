@@ -21,7 +21,7 @@ function renderproducts(products) {
     productContainer.innerHTML += `
       <div class="products">
         <img class="phone-img" src=${product.image} alt="pic">
-        <div class="content"
+        <div class="content-p">
         <h2 class="product-name"><h2>${product.product_name}</h2>
         <h4 class="product-discription">${product.description}</h3>
         <h4 class="product-feature">${product.features}</h3>
@@ -29,7 +29,6 @@ function renderproducts(products) {
         </div>
         <div class="btn_cart">
         <button class="cartbtn" onclick="addToCart(${product.product_id})"><h3>Cart</h3></button>
-        
       </div>       
     `;
   });
