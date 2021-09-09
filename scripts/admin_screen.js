@@ -18,13 +18,16 @@ function renderproducts(products) {
   products.forEach((product) => {
     productContainer.innerHTML += `
       <div class="products">
-        <img class="image" src=${product.image} alt="pic">
+        <img class="phone-img" src=${product.image} alt="pic">
+        <div class="content"
         <h3 class="product-discription">${product.product_name}</h3>
         <h3 class="product-discription">${product.description}</h3>
         <h3 class="product-discription">${product.features}</h3>
         <h3 class="product-price">${product.price}</h3>
-        <button onclick="deleteProduct(${product.product_id})">delete</button>
-        <button onclick="toggleModal('edit-modal-${product.product_id}')" id='${product.product_id}'>edit</button>
+        <div class="admin-btn_container">
+        <button class="admin-btn" onclick="deleteProduct(${product.product_id})">delete</button>
+        <button class="admin-btn" onclick="toggleModal('edit-modal-${product.product_id}')" id='${product.product_id}'>edit</button>
+        </div>
       </div>
 
       <div id="edit-modal-${product.product_id}" class="modal">

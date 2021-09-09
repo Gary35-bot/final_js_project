@@ -4,45 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./stylesheets/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/home_page.style.css" />
+    <title>Admin-users</title>
   </head>
   <body>
-    <div id="filters">
+    <div class="container-search">
+    <div id="filters-of-admin">
       <form onsubmit="event.preventDefault(); searchPhones();">
         <input class="insert" types="text" required id="searchTerm" />
         <button type="submit">Search</button>
       </form>
     </div>
-
+    <h1 class="headingforadmin">Add Product</h1>
+    <form class="addingprod">
+      <input
+        type="file"
+        id="Image"
+        name="image"
+        onchange="imageConverter()"
+        required
+      />
+      <input type="text" name="product_name" id="product_name" placeholder="name" required />
+      <input type="text" name="description" id="description" placeholder="describe" required />
+      <input type="text" name="feature" id="features" placeholder="feature" required />
+      <input type="text" name="price" id="price" placeholder="price" required />
+      <button onclick="event.preventDefault() ,addPhone()" class="addbtn">
+        Add a Phone
+      </button>
+    </form>
+  </div>
+  
+    <img src="" alt="" class="format-img" />
+    
     <div id="products-container"></div>
-
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        <form>
-          <input
-            type="file"
-            id="Image"
-            name="image"
-            onchange="imageConverter()"
-            required
-          />
-          <input type="text" name="product_name" id="product_name" />
-          <input type="text" name="description" id="description" />
-          <input type="text" name="feature" id="features" />
-          <input type="text" name="price" id="price" />
-          <button onclick="event.preventDefault() ,addPhone()" class="addbtn">
-            Add a Phone
-          </button>
-        </form>
-
-        <img src="" alt="" class="format-img" />
       </body>
 
       <script src="./scripts/admin_screen.js"></script>
