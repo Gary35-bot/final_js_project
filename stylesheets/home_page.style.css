@@ -400,7 +400,7 @@ body {
   }
 
   .logoutbtn {
-    padding: 18px;
+    padding: 5px;
     font-size: 10px;
   }
   .dropdown-content {
@@ -413,6 +413,6 @@ body {
     min-width: 100px;
   }
   .dropbtn {
-    padding: 14px;
+    padding: 19px;
   }
 }
