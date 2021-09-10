@@ -169,3 +169,7 @@ function readMe(id) {
     dots.style.display = "block";
   }
 }
+
+function checkOut(){
+  alert("thank you for buying at Mobi-Tech your item for arive in the next 3-4 working days")
+}
