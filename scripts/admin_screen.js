@@ -29,11 +29,9 @@ function renderproducts(products) {
         <button class="admin-btn" onclick="toggleModal('edit-modal-${product.product_id}')" id='${product.product_id}'>edit</button>
         </div>
       </div>
-
       <div id="edit-modal-${product.product_id}" class="modal">
           <div class="modaler">
             <button onclick="toggleModal('edit-modal-${product.product_id}')" class="modalbtn" id='${product.product_id}'>X</button>
-
       <!-- edit-prod -->
             <div class="editin">
               <form>

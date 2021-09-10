@@ -8,6 +8,10 @@
       src="https://kit.fontawesome.com/3ce17028e6.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/3ce17028e6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./stylesheets/home_page.style.css" />
     <title>Home_Page</title>
   </head>
@@ -26,11 +30,10 @@
       <div class="hi">
         <div>
           <button onclick="Modal()">X</button>
-          
         </div>
         <div class="cart"></div>
         <div class="cart-container"></div>
-        
+
         <div class="totalofcart"></div>
       </div>
       <div class="dropdown">
@@ -112,9 +115,37 @@
       <img class="gif-wit" src="./images/iphone-x-cellphone.gif" alt="gif" />
     </div>
 
+    <div class="mainsc-head"><h3>featured</h3></div>
+
+    <!-- <>>>>><<<>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>> -->
+    <div class="form-container"></div>
+    <button class="open-button" onclick="openForm()">Talk to us</button>
+    <div class="form-popup" id="myForm">
+      <form
+        action="https://formspree.io/f/xleajjwa"
+        method="POST"
+        class="contact-form"
+      >
+        <h2>Feedback Form</h2>
+        <input type="text" placeholder="Email" name="name" required />
+
+        <!-- <label for="feedback"><b>Give me feedback</b></label>
+        <input type="text" placeholder="text" name="feed" required /> -->
+        <input type="text" placeholder="text" name="feedback" required />
+        <button type="submit" class="btn-1">Submit</button>
+        <button type="button" class="btn-1 cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+
     <div id="products-container"></div>
 
     <img src="" alt="" />
+
+    <footer class="foot">
+      <h4>Designed By Web Gary © Updates of Lasted Phones "prototype".</h4>
+    </footer>
   </body>
   <script src="./scripts/products.js"></script>
 </html>
